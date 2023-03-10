@@ -8,6 +8,23 @@ function sortCarByYearAscendingly(cars) {
 
   // Tulis code-mu disini
 
+  // Membuat array kosong untuk menampung hasil sorting
+  const sortedData = [];
+
+  while (cars.length > 0) {
+    let minIndex = 0;
+    for (let i = 1; i < cars.length; i++) {
+      if (cars[i].year < cars[minIndex].year) {
+        minIndex = i;
+      }
+    }
+
+    // Memindahkan objek dengan nilai key "year" terkecil ke dalam array
+    sortedData.push(cars[minIndex]);
+    cars.splice(minIndex, 1);
+  }
+  
+  console.log(sortedData);
   // Rubah code ini dengan array hasil sorting secara ascending
-  return result;
+  return sortedData;
 }
