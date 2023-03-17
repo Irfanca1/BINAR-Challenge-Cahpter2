@@ -1,14 +1,12 @@
 function sortCarByYearAscendingly(cars) {
   // Sangat dianjurkan untuk console.log semua hal hehe
-  console.log(cars);
+  // console.log(cars);
 
   // Clone array untuk menghindari side-effect
   // Apa itu side effect?
   const result = [...cars];
 
   // Tulis code-mu disini
-
-  // Membuat array kosong untuk menampung hasil sorting
   const sortedData = [];
 
   while (cars.length > 0) {
@@ -19,11 +17,10 @@ function sortCarByYearAscendingly(cars) {
       }
     }
 
-    // Memindahkan objek dengan nilai key "year" terkecil ke dalam array
     sortedData.push(cars[minIndex]);
     cars.splice(minIndex, 1);
   }
-  
+
   console.log(sortedData);
   // Rubah code ini dengan array hasil sorting secara ascending
   return sortedData;
